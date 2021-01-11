@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Philip Yao </title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial;
+    }
+    /* Style the buttons that are used to open the tab content */
+    .tablinks {
+      background-color: #4169E1;
+      color: white;
+      float: left;
+      border: 1px solid powderblue;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      font-size: 17px;
+      width: 25%;
+    }
+    
+    .tablinks:hover {
+        background-color: #FF1493 !important;
+    }
+
+    .tabcontent {
+      color: black;
+      display: none;
+      padding: 100px 20px;
+      height: 100%;
+    }
+
+    </style>
+
+</head>
+<body>
+
+<!-- Tab links -->
+<button class="tablinks" onclick="openPage(this, 'Home')" id="defaultOpen">Home</button>
+
+<button class="tablinks" onclick="openPage(this, 'Projects')">Engineering Projects</button>
+
+<button class="tablinks" onclick="openPage(this, 'Resume')">Resume</button>
+
+<button class="tablinks" onclick="openPage(this, 'About Me')">About Me</button>
+
+<!-- Tab content -->
+<div id="Home" class="tabcontent">
+  <h1>Welcome to Philip Yao's Personal Website</h1>
+  <p> This is the first website I built when I was teaching myself web development. It is written in HTML, CSS, and Javascript but has no backend.</p>
+  <img src="PPP1.jpg" alt="Philip Yao", style="width:500px;height:350px;">
+
+
+</div>
+
+<div id="Resume" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p>
+</div>
+
+<div id="About Me" class="tabcontent">
+    <h3>It's a secret.</h3>
+</div>
+
+<div id="Projects" class="tabcontent">
+  
+  <h3>Mobile Car with Robot Arm </h3>
+  <p>Check out this embedded systems project I worked on for EECS 373 (Embedded Systems) at UMich in 2018. I worked with a team of 3 people to build a car with a robotic arm on top. We hacked a PS2 controller in order to control it and set up a wireless connection using a zigbee. We used the ARM cortex M3 processor</p>
+  
+</div>
+
+
+<script>
+    document.getElementById("defaultOpen").click();
+
+    function openPage(evt, pageName) {
+      var tabcontent = document.getElementsByClassName("tabcontent");
+      for (var i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      var tablinks = document.getElementsByClassName("tablinks");
+      for (var i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      
+      document.getElementById(pageName).style.display = "block";
+      evt.style.backgroundColor = 'green';
+    }
+</script>
+
+</body>
+</html>
