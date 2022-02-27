@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Philip Yao </title>
+  <title> Philip Yao </title>
     
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <style>
+  <style>
         
     body, html {
       height: 100%;
@@ -36,10 +36,41 @@
       height: 100%;
     }
 
+
+
+    .hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("PPP1.jpg");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    }
+
+    .hero-text {
+     text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    }
+
     </style>
 
 </head>
 <body>
+
+</div>
+
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:50px">Philip Yao</h1>
+  </div>
+</div>
+
+
 
 <!-- Tab links -->
 <button class="tablinks" onclick="openPage(this, 'Home')" id="defaultOpen">Home</button>
@@ -49,6 +80,8 @@
 <button class="tablinks" onclick="openPage(this, 'Resume')">Resume</button>
 
 <button class="tablinks" onclick="openPage(this, 'About Me')">About Me</button>
+
+<button class="tablinks" onclick="openPage(this, 'Contact')">Contact</button>
 
 <!-- Tab content -->
 <div id="Home" class="tabcontent">
@@ -74,9 +107,15 @@
   <h3>Mobile Car with Robot Arm </h3>
   <p>Check out this embedded systems project I worked on for EECS 373 (Embedded Systems) at UMich in 2018. I worked with a team of 3 people to build a car with a robotic arm on top. We hacked a PS2 controller in order to control it and set up a wireless connection using a zigbee. We used the ARM cortex M3 processor</p>
    <iframe width="560" height="315" src="https://www.youtube.com/embed/7RhK6xy_5k0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  
+
 </div>
 
+
+<div id="Contact" class="tabcontent">
+  
+  <p>Email me at philipyyao@gmail.com </p>
+
+</div>
 
 <script>
     document.getElementById("defaultOpen").click();
